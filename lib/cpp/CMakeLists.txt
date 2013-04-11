@@ -20,7 +20,7 @@
 #
 cmake_minimum_required(VERSION 2.8)
 
-project(libthrift_cmake CXX)
+project(libthrift CXX)
 
 
 set(libthrift_SOURCES  src/thrift/Thrift.cpp
