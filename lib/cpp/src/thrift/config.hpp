@@ -62,7 +62,7 @@
 #endif
 
 // Visual C++ 2010 does not support final
-#if _MSC_VER >= 1600
+#if _MSC_VER == 1600
 # undef FINAL
 # define FINAL
 #endif

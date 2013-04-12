@@ -49,10 +49,11 @@ namespace {
       s << "-Error with certificate at depth: " << depth;
 
 #ifndef BOOST_NO_CXX11_HDR_ARRAY
-      std::array<char, 256> data;
+      using std::array
 #else
-      boost::array<char, 256> data;
+      using boost::array;
 #endif
+      array<char, 256> data;
       X509_NAME_oneline( X509_get_issuer_name( cert ), data.data(), data.size() );
       s << " issuer = " << std::string( data.data() );
       X509_NAME_oneline( X509_get_subject_name( cert ), data.data(), data.size() );
